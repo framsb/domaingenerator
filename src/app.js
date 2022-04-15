@@ -7,5 +7,24 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let ult = [".es", ".com"];
+
+  let domnew = [];
+  let dom;
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < ult.length; l++) {
+          dom = pronoun[i] + adj[j] + noun[k] + ult[l];
+          domnew.push(dom);
+        }
+      }
+    }
+  }
+
+  console.log("Hello Rigo from the console");
+  document.querySelector("#excuse").innerHTML = domnew.join("<br>");
 };
